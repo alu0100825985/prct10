@@ -36,4 +36,10 @@ describe Bibliography do
     end
   end
   
+  describe "Debe existir una fecha de publicación" do
+    it "Existe una fecha de publicación" do
+      @p1.date.should eq("July 7, 2013") 
+    end
+  end
+  
 end
