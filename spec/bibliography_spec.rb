@@ -12,4 +12,10 @@ describe Bibliography do
     end
   end
   
+  describe "Debe existir un título" do
+    it "Existe un título" do
+      @p1.title.should eq("Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide") 
+    end
+  end
+  
 end
