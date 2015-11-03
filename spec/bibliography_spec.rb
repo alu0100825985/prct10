@@ -71,4 +71,11 @@ describe Bibliography do
       @p1.get_editorial().should eq("Pragmatic Bookshelf") 
     end
   end
+  
+  describe "Debe existir un método para obtener el número de edición" do
+    it "Existe un método para obtener el número de edición" do
+      @p1.get_edition_number().should eq("4 edition") 
+    end
+  end
+  
 end
