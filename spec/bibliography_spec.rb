@@ -54,4 +54,10 @@ describe Bibliography do
     end
   end
   
+  describe "Debe existir un método para obtener el título" do
+    it "Existe un método para obtener el título" do
+      @p1.get_title().should eq("Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide") 
+    end
+  end
+  
 end
