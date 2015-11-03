@@ -1,8 +1,3 @@
-require "gem/version"
-
-module Bibliography
-  module Gem
-    
     class Bibliography # Clase para el desarrollo de referencias bibliográficas.
     
       attr_accessor :author, :title, :series, :editorial, :edition_number, :date, :isbn
@@ -19,8 +14,5 @@ module Bibliography
       @edition_number = edition_number
       @date = date
       @isbn = isbn
-    
       end
     end
-  end
-end
