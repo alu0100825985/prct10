@@ -48,4 +48,10 @@ describe Bibliography do
     end
   end
   
+  describe "Debe existir un método para obtener el listado de autores" do
+    it "Existe un método para obtener el listado de autores" do
+      @p1.get_author().should eq(["Dave Thomas", "Andy Hunt", "Chad Fowler"]) 
+    end
+  end
+  
 end
