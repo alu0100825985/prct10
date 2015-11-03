@@ -17,6 +17,10 @@
       
       end
       
+      def formatted_reference() # Método para mostrar la referencia bajo formato.
+        "AUTORES: #{@author[0]}, #{@author[1]}, #{@author[2]} | TÍTULO: #{@title} | SERIE: #{@series} | EDITORIAL: #{@editorial} | NÚMERO DE EDICIÓN: #{@edition_number} | FECHA DE PUBLICACIÓN: #{@date} | ISBN: #{@isbn[0]}, #{@isbn[1]}"
+      end 
+      
       #-----> MÉTODOS GETTERS DE LA CLASE.
       
       def get_author() # Método para la devolución de author.
