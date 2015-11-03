@@ -24,4 +24,10 @@ describe Bibliography do
     end
   end
   
+  describe "Debe existir una editorial" do
+    it "Existe una editorial" do
+      @p1.editorial.should eq("Pragmatic Bookshelf") 
+    end
+  end
+  
 end
