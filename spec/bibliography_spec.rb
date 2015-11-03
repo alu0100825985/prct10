@@ -78,4 +78,9 @@ describe Bibliography do
     end
   end
   
+  describe "Debe existir un método para obtener la fecha de publicación" do
+    it "Existe un método para obtener la fecha de publicación" do
+      @p1.get_date().should eq("July 7, 2013") 
+    end
+  end
 end
