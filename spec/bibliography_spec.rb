@@ -30,4 +30,10 @@ describe Bibliography do
     end
   end
   
+  describe "Debe existir un número de edición" do
+    it "Existe un número de edición" do
+      @p1.edition_number.should eq("4 edition") 
+    end
+  end
+  
 end
