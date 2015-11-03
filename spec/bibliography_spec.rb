@@ -66,4 +66,9 @@ describe Bibliography do
     end
   end
   
+  describe "Debe existir un método para obtener la editorial" do
+    it "Existe un método para obtener la editorial" do
+      @p1.get_editorial().should eq("Pragmatic Bookshelf") 
+    end
+  end
 end
