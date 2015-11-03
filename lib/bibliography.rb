@@ -1,4 +1,4 @@
-require "bibliography/gem/version"
+require "gem/version"
 
 module Bibliography
   module Gem
