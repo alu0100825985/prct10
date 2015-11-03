@@ -60,4 +60,10 @@ describe Bibliography do
     end
   end
   
+  describe "Debe existir un método para obtener la serie" do
+    it "Existe un método para obtener la serie" do
+      @p1.get_series().should eq("(The Facets of Ruby)") 
+    end
+  end
+  
 end
