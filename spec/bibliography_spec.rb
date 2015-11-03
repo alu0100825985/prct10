@@ -83,4 +83,11 @@ describe Bibliography do
       @p1.get_date().should eq("July 7, 2013") 
     end
   end
+  
+  describe "Debe existir un método para obtener el listado de ISBN" do
+    it "Existe un método para obtener el listado de ISBN" do
+      @p1.get_isbn().should eq(["ISBN-13: 978-1937785499", "ISBN-10: 1937785491"]) 
+    end
+  end
+  
 end
