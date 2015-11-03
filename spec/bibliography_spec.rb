@@ -42,4 +42,10 @@ describe Bibliography do
     end
   end
   
+  describe "Debe existir uno o más números ISBN" do
+    it "Existe uno o mas números ISBN" do
+      @p1.isbn.should eq(["ISBN-13: 978-1937785499", "ISBN-10: 1937785491"]) 
+    end
+  end
+  
 end
