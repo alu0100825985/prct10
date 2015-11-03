@@ -90,4 +90,10 @@ describe Bibliography do
     end
   end
   
+  describe "Debe existir un método para obtener la referencia formateada" do
+    it "Existe un método para obtener la referencia formateada" do
+      @p1.formatted_reference().should eq("AUTORES: Dave Thomas, Andy Hunt, Chad Fowler | TÍTULO: Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide | SERIE: (The Facets of Ruby) | EDITORIAL: Pragmatic Bookshelf | NÚMERO DE EDICIÓN: 4 edition | FECHA DE PUBLICACIÓN: July 7, 2013 | ISBN: ISBN-13: 978-1937785499, ISBN-10: 1937785491") 
+    end
+  end
+  
 end
