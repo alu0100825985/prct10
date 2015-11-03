@@ -18,4 +18,10 @@ describe Bibliography do
     end
   end
   
+  describe "Debe existir o no una serie" do
+    it "Existe una serie" do
+      @p1.series.should eq("(The Facets of Ruby)") 
+    end
+  end
+  
 end
