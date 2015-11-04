@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'bibliography'
+require './lib/bibliography/gem/bibliography.rb'
 
 describe Bibliography do
   before :each do
