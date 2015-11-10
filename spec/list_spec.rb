@@ -2,14 +2,14 @@ require 'spec_helper'
 require './lib/bibliography/gem/bibliography.rb'
 require './lib/bibliography/gem/list.rb'
 
-describe List do
+describe "Pruebas para una lista con nodos simples" do
     before :each do
         @list = List.new(nil)
         Node = Struct.new(:value, :next)
     end
     
     describe "Prueba para comprobar el funcionamiento de los nodos" do
-        it "Existe un nodo de la lista con su valor y su siguiente" do
+        it "Existe un nodo con su valor y su siguiente" do
             @node = Node.new(10,nil)
             @node.value.should eq(10)
             @node.next.should eq(nil)
@@ -34,6 +34,13 @@ describe List do
             @list.insert(@node2)
             expect(@list.head).to eq(@node2)
             expect(@node2.next).to eq(@node1)
+        end
+        
+        it "Se puede extraer un elemento de la lista" do
+            @node = Node.new(10,nil)
+            @list.insert(@node)
+            expect(@list.extract).to eq(@node)
+            expect(@list.empty?).to eq(true)
         end
     end
 end
