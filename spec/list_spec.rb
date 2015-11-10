@@ -90,4 +90,8 @@ describe "Pruebas para una lista bibliográfica" do
     it "Existe una lista bibliográfica" do
         expect(@bibliography_list.empty?).to eq(false)
     end
+    
+    it "Existe una referencia de la lista que tiene como autor a Richard E." do
+        expect(@bibliography_list.extract.next).to eq(@reference4)
+    end
 end
