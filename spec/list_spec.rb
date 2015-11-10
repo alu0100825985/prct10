@@ -8,7 +8,7 @@ describe List do
         Node = Struct.new(:value, :next)
     end
     
-    describe "Pruebas para comprobar el funcionamiento de los nodos" do
+    describe "Prueba para comprobar el funcionamiento de los nodos" do
         it "Existe un nodo de la lista con su valor y su siguiente" do
             @node = Node.new(10,nil)
             @node.value.should eq(10)
