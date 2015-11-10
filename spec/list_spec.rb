@@ -39,7 +39,17 @@ describe "Pruebas para una lista con nodos simples" do
         it "Se puede extraer un elemento de la lista" do
             @node = Node.new(10,nil)
             @list.insert(@node)
-            expect(@list.extract).to eq(@node)
+            @list.extract
+            expect(@list.empty?).to eq(true)
+        end
+        
+        it "Se puede extraer varios elementos de la lista" do
+            @node1 = Node.new(10,nil)
+            @node2 = Node.new(20,nil)
+            @list.insert(@node1)
+            @list.insert(@node2)
+            @list.extract
+            @list.extract
             expect(@list.empty?).to eq(true)
         end
     end
