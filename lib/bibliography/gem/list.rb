@@ -14,7 +14,7 @@
         item.next = @head # Establecemos como next del nodo insertado a head (INSERTA AL PRINCIPIO)
         @head = item # El head será ahora el elemento nodo insertado.
       end
-      
+  
       def empty? # Método para comprobar si la lista está vacía.
         @head == nil
       end
