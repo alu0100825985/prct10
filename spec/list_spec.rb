@@ -26,5 +26,14 @@ describe List do
             @list.insert(@node)
             expect(@list.head).to eq(@node)
         end
+        
+        it "Se puede insertar varios elementos en la lista" do
+            @node1 = Node.new(10,nil)
+            @node2 = Node.new(20,nil)
+            @list.insert(@node1)
+            @list.insert(@node2)
+            expect(@list.head).to eq(@node2)
+            expect(@node2.next).to eq(@node1)
+        end
     end
 end
