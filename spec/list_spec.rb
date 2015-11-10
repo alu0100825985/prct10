@@ -20,5 +20,11 @@ describe List do
         it "Existe una lista y está vacía" do
             expect(@list.empty?).to eq(true)
         end
+        
+        it "Se puede insertar un elemento en la lista" do
+            @node = Node.new(10,nil)
+            @list.insert(@node)
+            expect(@list.head).to eq(@node)
+        end
     end
 end
