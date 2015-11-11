@@ -5,14 +5,13 @@ require './lib/bibliography/gem/list.rb'
 describe "Pruebas para una lista con nodos simples" do
     before :each do
         @list = List.new(nil)
-        Node = Struct.new(:value, :next)
     end
     
     describe "Prueba para comprobar el funcionamiento de los nodos" do
         it "Existe un nodo con su valor y su siguiente" do
             @node = Node.new(10,nil)
-            @node.value.should eq(10)
-            @node.next.should eq(nil)
+            expect(@node.value).to eq(10)
+            expect(@node.next).to eq(nil)
         end
     end
         
@@ -72,7 +71,6 @@ end
 describe "Pruebas para una lista bibliográfica" do
     before :each do
         @bibliography_list = List.new(nil)
-        Node = Struct.new(:value, :next)
         
         @reference1 = Node.new(Bibliography.new(["Dave Thomas", "Andy Hunt", "Chad Fowler"], "Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide", "(The Facets of Ruby)", "Pragmatic Bookshelf;", "4 edition", "July 7, 2013", ["ISBN-13: 978-1937785499", "ISBN-10: 1937785491"]),nil)
         @reference2 = Node.new(Bibliography.new(["Scott Chacon"], "Pro Git 2009th Edition.", "(Pro).", "Apress;", "2009 edition", "(August 27, 2009)", ["ISBN-13: 978- 1430218333.", "ISBN-10: 1430218339."]),nil)

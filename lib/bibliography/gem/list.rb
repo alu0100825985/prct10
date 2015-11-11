@@ -1,3 +1,5 @@
+    Node = Struct.new(:value, :next)
+
     class List # Clase para el desarrollo de una lista.
     
       attr_accessor :head
