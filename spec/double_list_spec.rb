@@ -51,5 +51,20 @@ describe "Pruebas para una lista con nodos simples" do
             @doublelist.extract
             expect(@doublelist.empty?).to eq(true)
         end
+        
+        it "Existe una lista con varios nodos, su cabeza y su cola" do
+            @node1 = Node.new(nil,10,nil)
+            @node2 = Node.new(nil,20,nil)
+            @node3 = Node.new(nil,30,nil)
+            @doublelist.insert(@node1)
+            @doublelist.insert(@node2)
+            @doublelist.insert(@node3)
+            expect(@doublelist.empty?).to eq(false)
+            expect(@doublelist.head).to eq(@node3)
+            expect(@node3.next).to eq(@node2)
+            expect(@node2.next).to eq(@node1)
+            expect(@node1.next).to eq(nil)
+            expect(@doublelist.tail).to eq (@node1)
+        end
     end
 end
