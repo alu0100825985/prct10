@@ -21,8 +21,8 @@
           @tail = item # La cola será igual al nodo insertado.
         else 
           @head.prev = item # El prev del nodo que estaba situado al principio será el insertado (este pasará a ser ahora el segundo)
-          @head = item # El nodo insertado pasará a ser la cabeza de la lista.
         end
+        @head = item # El nodo insertado pasará a ser la cabeza de la lista.
       end
       
       def extract # Método para extraer un nodo del principio de la lista.

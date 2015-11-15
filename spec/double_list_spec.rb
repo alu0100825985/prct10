@@ -19,5 +19,11 @@ describe "Pruebas para una lista con nodos simples" do
         it "Existe una lista y está vacía" do
             expect(@doublelist.empty?).to eq(true)
         end
+
+        it "Se puede insertar un elemento en la lista" do
+            @node = Node.new(nil,10,nil)
+            @doublelist.insert(@node)
+            expect(@doublelist.head).to eq(@node)
+        end
     end
 end
