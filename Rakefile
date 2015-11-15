@@ -8,3 +8,7 @@ $:.unshift File.dirname(__FILE__) + 'lib'
 task :spec_list do
     sh "rspec spec/list_spec.rb"
 end
+
+task :spec_double_list do
+    sh "rspec spec/double_list_spec.rb"
+end
