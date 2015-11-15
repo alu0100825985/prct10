@@ -43,13 +43,4 @@
         @head == nil
       end
       
-      #-----> MÉTODOS GETTERS AND SETTERS (RECORRIDO)
-      
-      def get_next(item) # Método para obtener el next de un nodo.
-        return item.next
-      end
-      
-      def get_prev(item) # Método para obtener el prev de un nodo.
-        return item.prev
-      end
     end

@@ -25,5 +25,14 @@ describe "Pruebas para una lista con nodos simples" do
             @doublelist.insert(@node)
             expect(@doublelist.head).to eq(@node)
         end
+        
+        it "Se puede insertar varios elementos en la lista" do
+            @node1 = Node.new(nil,10,nil)
+            @node2 = Node.new(nil,20,nil)
+            @doublelist.insert(@node1)
+            @doublelist.insert(@node2)
+            expect(@doublelist.head).to eq(@node2)
+            expect(@node2.next).to eq(@node1)
+        end
     end
 end
