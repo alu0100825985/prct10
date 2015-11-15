@@ -14,4 +14,10 @@ describe "Pruebas para una lista con nodos simples" do
             expect(@node.next).to eq(nil)
         end
     end
+    
+    describe "Pruebas para comprobar el funcionamiento de la lista" do
+        it "Existe una lista y está vacía" do
+            expect(@doublelist.empty?).to eq(true)
+        end
+    end
 end
