@@ -34,5 +34,12 @@ describe "Pruebas para una lista con nodos simples" do
             expect(@doublelist.head).to eq(@node2)
             expect(@node2.next).to eq(@node1)
         end
+        
+        it "Se puede extraer un elemento de la lista" do
+            @node = Node.new(nil,10,nil)
+            @doublelist.insert(@node)
+            @doublelist.extract
+            expect(@doublelist.empty?).to eq(true)
+        end
     end
 end
