@@ -1,4 +1,4 @@
-    Node = Struct.new(:prev, :value, :next) # Definimos la estructura del nodo.
+    Node = Struct.new(:prev, :value, :next) # Definimos la estructura del nodo
 
     class Double_List # Clase para el desarrollo de una lista doblemente enlazada.
     
@@ -14,15 +14,16 @@
       end
       
       def insert(item) # Método para insertar un nodo al principio de la lista.
-        item.next = @head # Establecemos como next del nodo insertado a head.
-        item.prev = nil # Establecemos como nulo el prev del nodo insertado.
+        @node = Node.new(nil,item,nil) # Inicializamos un nodo con el value pasado por parámetro.
+        @node.next = @head # Establecemos como next del nodo insertado a head.
+        @node.prev = nil # Establecemos como nulo el prev del nodo insertado.
 
         if @tail == nil # CONDICIÓN: Si no existe cola en la lista.
-          @tail = item # La cola será igual al nodo insertado.
+          @tail = @node # La cola será igual al nodo insertado.
         else 
-          @head.prev = item # El prev del nodo que estaba situado al principio será el insertado (este pasará a ser ahora el segundo)
+          @head.prev = @node # El prev del nodo que estaba situado al principio será el insertado (este pasará a ser ahora el segundo)
         end
-        @head = item # El nodo insertado pasará a ser la cabeza de la lista.
+        @head = @node # El nodo insertado pasará a ser la cabeza de la lista.
       end
       
       def extract # Método para extraer un nodo del principio de la lista.

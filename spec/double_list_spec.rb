@@ -21,76 +21,57 @@ describe "Pruebas para una lista con nodos simples" do
         end
 
         it "Se puede insertar un elemento en la lista" do
-            @node = Node.new(nil,10,nil)
-            @doublelist.insert(@node)
-            expect(@doublelist.head).to eq(@node)
+            @doublelist.insert(10)
+            expect(@doublelist.head.value).to eq(10)
         end
         
         it "Se puede insertar varios elementos en la lista" do
-            @node1 = Node.new(nil,10,nil)
-            @node2 = Node.new(nil,20,nil)
-            @doublelist.insert(@node1)
-            @doublelist.insert(@node2)
-            expect(@doublelist.head).to eq(@node2)
-            expect(@node2.next).to eq(@node1)
+            @doublelist.insert(10)
+            @doublelist.insert(20)
+            expect(@doublelist.head.value).to eq(20)
+            expect(@doublelist.head.next.value).to eq(10)
         end
         
         it "Se puede extraer un elemento de la lista" do
-            @node = Node.new(nil,10,nil)
-            @doublelist.insert(@node)
+            @doublelist.insert(10)
             @doublelist.extract
             expect(@doublelist.empty?).to eq(true)
         end
         
         it "Se puede extraer varios elementos de la lista" do
-            @node1 = Node.new(nil,10,nil)
-            @node2 = Node.new(nil,20,nil)
-            @doublelist.insert(@node1)
-            @doublelist.insert(@node2)
+            @doublelist.insert(10)
+            @doublelist.insert(20)
             @doublelist.extract
             @doublelist.extract
             expect(@doublelist.empty?).to eq(true)
         end
         
         it "Existe una lista con varios nodos, su cabeza y su cola" do
-            @node1 = Node.new(nil,10,nil)
-            @node2 = Node.new(nil,20,nil)
-            @node3 = Node.new(nil,30,nil)
-            @doublelist.insert(@node1)
-            @doublelist.insert(@node2)
-            @doublelist.insert(@node3)
+            @doublelist.insert(10)
+            @doublelist.insert(20)
+            @doublelist.insert(30)
             expect(@doublelist.empty?).to eq(false)
-            expect(@doublelist.head).to eq(@node3)
-            expect(@node3.next).to eq(@node2)
-            expect(@node2.next).to eq(@node1)
-            expect(@node1.next).to eq(nil)
-            expect(@doublelist.tail).to eq(@node1)
+            expect(@doublelist.head.value).to eq(30)
+            expect(@doublelist.head.next.value).to eq(20)
+            expect(@doublelist.tail.prev.value).to eq(20)
+            expect(@doublelist.tail.value).to eq(10)
+            expect(@doublelist.tail.next).to eq(nil)
         end
     end
     
     describe "Pruebas para comprobar el recorrido en la lista" do
         it "Se puede recorrer la lista de izquierda a derecha" do
-            @node1 = Node.new(nil,10,nil)
-            @node2 = Node.new(nil,20,nil)
-            @node3 = Node.new(nil,30,nil)
-            @doublelist.insert(@node1)
-            @doublelist.insert(@node2)
-            @doublelist.insert(@node3)
-            expect(@node3.next).to eq(@node2)
-            expect(@node2.next).to eq(@node1)
-            expect(@node1.next).to eq(nil)
+            @doublelist.insert(10)
+            @doublelist.insert(20)
+            expect(@doublelist.head.value).to eq(20)
+            expect(@doublelist.head.next.value).to eq(10)
         end
         
         it "Se puede recorrer la lista de derecha a izquierda" do
-            @node1 = Node.new(nil,10,nil)
-            @node2 = Node.new(nil,20,nil)
-            @node3 = Node.new(nil,30,nil)
-            @doublelist.insert(@node1)
-            @doublelist.insert(@node2)
-            @doublelist.insert(@node3)
-            expect(@node1.prev).to eq(@node2)
-            expect(@node2.prev).to eq(@node3)
-            expect(@node3.prev).to eq(nil)
+            @doublelist.insert(10)
+            @doublelist.insert(20)
+            expect(@doublelist.tail.value).to eq(10)
+            expect(@doublelist.tail.prev.value).to eq(20)
         end
     end
 end

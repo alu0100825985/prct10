@@ -51,5 +51,65 @@
         return @isbn
       end
     end
-
+  
+    class Periodicals # Clase para representar publicaciones periódicas.
+  
+      attr_accessor :author, :title
+    
+      #-----> MÉTODOS ELEMENTALES DE LA CLASE.
+    
+      def initialize(author, title) # Constructor de la clase.
+    
+      # Declaración e inicialización de las variables de instancia.
+      @author = author
+      @title = title
+      
+      end
+    end
+    
+    class Magazine_Articles < Periodicals # Clase para representar artículos de revistas
+    
+      attr_accessor :magazine
+    
+      #-----> MÉTODOS ELEMENTALES DE LA CLASE.
+    
+      def initialize(magazine) # Constructor de la clase.
+    
+      # Declaración e inicialización de las variables de instancia.
+      @magazine = magazine
+      
+      end
+    end
+    
+    class Newspaper_Articles < Periodicals # Clase para representar artículos de periódicos.
+    
+      attr_accessor :newspaper
+    
+      #-----> MÉTODOS ELEMENTALES DE LA CLASE.
+    
+      def initialize(newspaper) # Constructor de la clase.
+    
+      # Declaración e inicialización de las variables de instancia.
+      @newspaper = newspaper
+      
+      end
+    end
+    
+    class Electronic_Document < Periodicals # Clase para representar documentos electrónicos.
+    
+      attr_accessor :website
+    
+      #-----> MÉTODOS ELEMENTALES DE LA CLASE.
+    
+      def initialize(website) # Constructor de la clase.
+    
+      # Declaración e inicialización de las variables de instancia.
+      @website = website
+      
+      end
+    end
+    
+    
+    
+    
       
