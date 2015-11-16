@@ -12,3 +12,7 @@ end
 task :spec_double_list do
     sh "rspec spec/double_list_spec.rb"
 end
+
+task :spec_references do
+    sh "rspec spec/bibliography_spec.rb"
+end
