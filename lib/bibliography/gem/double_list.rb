@@ -1,4 +1,4 @@
-    Node = Struct.new(:prev, :value, :next) # Definimos la estructura del nodo
+    Node1 = Struct.new(:prev, :value, :next) # Definimos la estructura del nodo
 
     class Double_List # Clase para el desarrollo de una lista doblemente enlazada.
     
@@ -14,7 +14,7 @@
       end
       
       def insert(item) # Método para insertar un nodo al principio de la lista.
-        @node = Node.new(nil,item,nil) # Inicializamos un nodo con el value pasado por parámetro.
+        @node = Node1.new(nil,item,nil) # Inicializamos un nodo con el value pasado por parámetro.
         @node.next = @head # Establecemos como next del nodo insertado a head.
         @node.prev = nil # Establecemos como nulo el prev del nodo insertado.
 

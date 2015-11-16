@@ -33,7 +33,7 @@
       end
     end
     
-    class Bibliography < References # Clase para el desarrollo de referencias bibliográficas. Herencia de References.
+    class Books < References # Clase para el desarrollo de referencias bibliográficas. Herencia de References.
     
       attr_accessor :series, :edition_number, :isbn
     

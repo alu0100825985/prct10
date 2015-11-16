@@ -8,7 +8,7 @@ describe "Pruebas para una lista con nodos simples" do
     
     describe "Prueba para comprobar el funcionamiento de los nodos" do
         it "Existe un nodo con su previo, su valor y su siguiente" do
-            @node = Node.new(nil,10,nil)
+            @node = Node1.new(nil,10,nil)
             expect(@node.prev).to eq(nil)
             expect(@node.value).to eq(10)
             expect(@node.next).to eq(nil)
