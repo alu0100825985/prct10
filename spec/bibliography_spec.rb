@@ -19,5 +19,9 @@ describe References do
     it "Magazine_Articles es una clase herencia de References" do
       expect(@magazine_article.is_a? References::Magazine_Articles).to eq(true)
     end
+    
+    it "Newspaper_Articles es una clase herencia de References" do
+      expect(@newspaper_article.is_a? References::Newspaper_Articles).to eq(true)
+    end
   end
 end
