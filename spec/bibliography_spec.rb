@@ -13,19 +13,23 @@ describe References do
   describe "Jerarquía de Clases - Herencia" do
     
     it "Bibliography es una clase herencia de References" do
-      expect(@bibliography.is_a? References::Books).to eq(true)
+      expect(@bibliography.is_a? Books).to eq(true)
+      expect(@bibliography.kind_of? References).to eq(true)
     end
     
     it "Magazine_Articles es una clase herencia de References" do
-      expect(@magazine_article.is_a? References::Magazine_Articles).to eq(true)
+      expect(@magazine_article.is_a? Magazine_Articles).to eq(true)
+      expect(@magazine_article.kind_of? References).to eq(true)
     end
     
     it "Newspaper_Articles es una clase herencia de References" do
-      expect(@newspaper_article.is_a? References::Newspaper_Articles).to eq(true)
+      expect(@newspaper_article.is_a? Newspaper_Articles).to eq(true)
+      expect(@newspaper_article.kind_of? References).to eq(true)
     end
     
     it "Electronic_Document es una clase herencia de References" do
-      expect(@electronic_document.is_a? References::Electronic_Document).to eq(true)
+      expect(@electronic_document.is_a? Electronic_Document).to eq(true)
+      expect(@electronic_document.kind_of? References).to eq(true)
     end
   end
 end
