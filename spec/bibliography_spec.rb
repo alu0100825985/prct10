@@ -3,7 +3,6 @@ require './lib/bibliography/gem/bibliography.rb'
 
 describe References do
   before :each do
-    @reference = References.new(["Dave Thomas", "Andy Hunt", "Chad Fowler"], "Programming Ruby 1.9 & 2.0: The Pragmatic Programmers’ Guide", "Pragmatic Bookshelf", "July 7, 2013")
     @bibliography = Books.new("(The Facets of Ruby)", "4 edition", ["ISBN-13: 978-1937785499", "ISBN-10: 1937785491"])
     @magazine_article = Magazine_Articles.new("PC World", "ISSN-7398473")
     @newspaper_article = Newspaper_Articles.new("Marca", "National")
