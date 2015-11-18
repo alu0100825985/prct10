@@ -30,5 +30,9 @@ describe References do
       expect(@electronic_document.is_a? Electronic_Document).to eq(true)
       expect(@electronic_document.kind_of? References).to eq(true)
     end
+    
+    it "Probando el tipo" do
+      expect(@electronic_document.respond_to? :issn).to eq(false)
+    end
   end
 end
