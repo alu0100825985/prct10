@@ -1,16 +1,18 @@
     class References # Clase para el desarrollo de referencias.
     
-      attr_accessor :author, :title, :editorial, :date
+      attr_accessor :author, :title, :editorial, :date, :number_pages
+      include Comparable # Módulo que permite que implementemos comparaciones convencionales en nuestra clase.
     
-      #-----> MÉTODOS ELEMENTALES DE LA CLASE.
+      #-----> MÉTODOS DE LA CLASE.
     
-      def initialize(author, title, editorial, date) # Constructor de la clase.
+      def initialize(author, title, editorial, date, number_pages) # Constructor de la clase.
     
       # Declaración e inicialización de las variables de instancia.
       @author = author
       @title = title
       @editorial = editorial
       @date = date
+      @number_pages = number_pages
       
       end
       
