@@ -56,5 +56,9 @@ describe Double_List do
             @doublelist.insert([1, 2, 3, 4, 5])
             expect(@doublelist.head.value.first).to eq(1)
         end
+        it "Comprobando el método last" do
+            @doublelist.insert([1, 2, 3, 4, 5])
+            expect(@doublelist.head.value.last).to eq(5)
+        end
     end
 end
