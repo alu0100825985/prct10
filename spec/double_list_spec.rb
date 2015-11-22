@@ -39,5 +39,9 @@ describe Double_List do
             @doublelist.insert([1, 2, 3, 4, 5])
             expect(@doublelist.head.value.drop(3)).to eq([4, 5])
         end
+        it "Comprobando el método max" do
+            @doublelist.insert([1, 2, 3, 4, 5])
+            expect(@doublelist.head.value.max).to eq(5)
+        end
     end
 end
