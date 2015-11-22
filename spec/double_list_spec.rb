@@ -52,5 +52,9 @@ describe Double_List do
             expect(@doublelist.head.value.sort).to eq([1, 2, 3, 4, 5])
             expect(@doublelist.head.value.sort.reverse).to eq([5, 4, 3, 2, 1])
         end
+        it "Comprobando el método first" do
+            @doublelist.insert([1, 2, 3, 4, 5])
+            expect(@doublelist.head.value.first).to eq(1)
+        end
     end
 end
