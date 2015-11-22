@@ -28,6 +28,10 @@ describe References do
     it "La referencia de Andy Coleman es mayor o igual que la referencia de Ricky Seawton" do
       expect(@references2 >= @references).to eq(true)
     end
+    
+    it "La referencia de Rubok Anthy es mayor que la referencia de Ricky Seawton" do
+      expect(@references3 > @references).to eq(true)
+    end
   end
   
 end
