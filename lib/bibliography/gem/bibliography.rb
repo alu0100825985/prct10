@@ -16,6 +16,10 @@
       
       end
       
+      def <=>(other) # Método para incluir el mixin comparable. Se usa el número de páginas para realizar la comparación.
+        @number_pages <=> other.number_pages
+      end
+      
       #-----> MÉTODOS GETTERS DE LA CLASE.
       
       def get_author() # Método para la devolución de author.
