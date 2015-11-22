@@ -9,10 +9,15 @@ describe References do
   describe "Comparaciones entre referencias basadas en el número de páginas" do
     before :each do
       @references1 = References.new("Stan Rebick", "Ruby Modules", "Editorik", "23 January, 2015", "264")
+      @references2 = References.new("Andy Coleman", "Ruby World", "Panemo", "15 April, 2010", "323")
     end
     
     it "La referencia de Stan Rebick tiene menos páginas que la referencia de Ricky Seawton" do
       expect(@references1 < @references).to eq(true)
+    end
+    
+    it "La referencia de Andy Coleman tiene menos o igual número de páginas que la referencia de Ricky Seawton" do
+      expect(@refences2 <= @references).to eq(true)
     end
   end
   

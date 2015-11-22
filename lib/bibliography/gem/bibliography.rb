@@ -17,7 +17,11 @@
       end
       
       def <=>(other) # Método para incluir el mixin comparable. Se usa el número de páginas para realizar la comparación.
-        @number_pages <=> other.number_pages
+        if other.is_a? References
+          @number_pages <=> other.number_pages
+        else
+          false
+        end
       end
       
       #-----> MÉTODOS GETTERS DE LA CLASE.
