@@ -19,6 +19,10 @@ describe References do
     it "La referencia de Andy Coleman tiene menos o igual número de páginas que la referencia de Ricky Seawton" do
       expect(@references2 <= @references).to eq(true)
     end
+    
+    it "La referencia de Andy Coleman tiene igual número de páginas que la referencia de Ricky Seawton" do
+      expect(@references2 == @references).to eq(true)
+    end
   end
   
 end
