@@ -3,6 +3,7 @@
     class Double_List # Clase para el desarrollo de una lista doblemente enlazada.
     
       attr_accessor :head, :tail
+      include Enumerable 
     
       #-----> MÉTODOS DE LA CLASE.
     
@@ -42,6 +43,11 @@
   
       def empty? # Método para comprobar si la lista está vacía.
         @head == nil
+      end
+      
+      def each # Método del mixin Enumerable. Se define como una iteración sobre la cabeza y la cola de la lista
+        yield @head
+        yield @tail
       end
       
     end
