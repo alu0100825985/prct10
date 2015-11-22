@@ -43,5 +43,9 @@ describe Double_List do
             @doublelist.insert([1, 2, 3, 4, 5])
             expect(@doublelist.head.value.max).to eq(5)
         end
+        it "Comprobando el método min" do
+            @doublelist.insert([1, 2, 3, 4, 5])
+            expect(@doublelist.head.value.min).to eq(1)
+        end
     end
 end
