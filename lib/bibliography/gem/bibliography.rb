@@ -24,6 +24,14 @@
         end
       end
       
+      def ==(other) # Método de comparación añadido al mixin, ya que este muestra un warning al realizar el ==.
+        if other.is_a? References
+          @number_pages == other.number_pages
+        else
+          false
+        end
+      end
+      
       #-----> MÉTODOS GETTERS DE LA CLASE.
       
       def get_author() # Método para la devolución de author.

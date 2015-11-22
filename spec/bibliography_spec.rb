@@ -16,25 +16,25 @@ describe References do
     it "La referencia de Stan Rebick es menor que la referencia de Ricky Seawton" do
       expect(@references1 < @references).to eq(true)
     end
-    
     it "La referencia de Andy Coleman es menor o igual que la referencia de Ricky Seawton" do
       expect(@references2 <= @references).to eq(true)
     end
-    
     it "La referencia de Andy Coleman es igual que la referencia de Ricky Seawton" do
       expect(@references2 == @references).to eq(true)
     end
-    
     it "La referencia de Andy Coleman es mayor o igual que la referencia de Ricky Seawton" do
       expect(@references2 >= @references).to eq(true)
     end
-    
     it "La referencia de Rubok Anthy es mayor que la referencia de Ricky Seawton" do
       expect(@references3 > @references).to eq(true)
     end
-    
     it "La referencia de Rubok Anthy no es igual que la referencia de Ricky Seawton" do
       expect(@references3 == @references).to eq(false)
+    end
+    it "La receta médica de la Farmacia Curbelo no es igual que la referencia de Ricky Seawton" do
+      Prescription = Struct.new(:age, :period, :pharmacy)
+      prescription = Prescription.new("12", "daily", "Curbelo Pharmacy")
+      expect(@references == prescription).to eq(false)
     end
   end
   
