@@ -24,7 +24,7 @@
         end
       end
       
-      def ==(other) # Método de comparación añadido al mixin, ya que este muestra un warning al realizar el ==.
+      def ==(other) # Método de comparación añadido al mixin comparable, ya que este muestra un warning al realizar el ==.
         if other.is_a? References
           @number_pages == other.number_pages
         else
