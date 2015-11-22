@@ -6,9 +6,14 @@ describe References do
     @references = References.new("Ricky Seawton", "Ruby Instances", "Santillanic", "17 July, 2009", "323")
   end
   
-  context to "Comparaciones entre referencias basadas en el número de páginas" do
-  
+  describe "Comparaciones entre referencias basadas en el número de páginas" do
+    before :each do
+      @references1 = References.new("Stan Rebick", "Ruby Modules", "Editorik", "23 January, 2015", "264")
+    end
+    
+    it "La referencia de Stan Rebick tiene menos páginas que la referencia de Ricky Seawton" do
+      expect(@references1 < @references).to eq(true)
+    end
   end
   
- 
 end
