@@ -45,9 +45,12 @@
         @head == nil
       end
       
-      def each # Método del mixin Enumerable. Se define como una iteración sobre la cabeza y la cola de la lista
-        yield @head
-        yield @tail
+      def each # Método del mixin Enumerable. Se define como una iteración sobre los valores de los nodos.
+        auxiliary_pointer = @head # Puntero auxiliar para ir recorriendo la lista. Inicializada en la cabeza de la lista.
+        while auxiliary_pointer != nil # Mientras el puntero auxiliar no sea igual a nil (fin de la lista).
+          yield auxiliary_pointer.value # Yield sobre el valor del nodo apuntado para el mixin enumerable.
+          auxiliary_pointer = auxiliary_pointer.next # Cambiamos el puntero hacia el siguiente nodo.
+        end
       end
       
     end
