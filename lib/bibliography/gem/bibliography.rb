@@ -53,6 +53,31 @@
 			  
 			  return title_formated.join(' ') # Retornamos el título aplicando un espacio entre palabra.
 			end
+			
+			def <=>(other) # Método para incluir el mixin comparable.
+			  if(@author == other.author) # CONDICIÓN: Si ambos autores son iguales.
+			    return true
+			  else # CONDICIÓN: Si los autores son diferentes 
+				  authors_array = [@author, other.author] # Inicializamos un array con el nombre de ambos autores.
+				  authors_array.sort_by!{|letter| letter.downcase} # Ordenamos alfabéticamente el array.
+				  if(authors_array.first == @author) # CONDICIÓN: Si el orden de los autores ha cambiado.
+					  return false
+				  end
+				  return true
+				end
+				
+				if(@title == other.title)  # CONDICIÓN: Si ambos autores son iguales.
+					return true
+				else # CONDICIÓN: Si los autores son diferentes
+					title_array = [@title, other.title] # Inicializamos un array con ambos títulos.
+					title_array.sort_by!{|letter| letter.downcase} # Ordenamos alfabéticamente el array.
+					if(title_array.first == @title)  # CONDICIÓN: Si el orden de los títulos ha cambiado.
+						return false
+					end
+					return true
+				end
+			end
+		end
       
       #-----> MÉTODOS GETTERS DE LA CLASE.
       
