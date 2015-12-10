@@ -9,7 +9,7 @@
     
         # Declaración e inicialización de las variables de instancia.
         @author = author_format(author) # Obtenemos el nombre del author bajo formato.
-        @title = title
+        @title = title_format(title) # Obtenemos el nombre del author bajo formato.
         @editorial = editorial
         @publication = publication
       end
@@ -82,6 +82,11 @@
       @edition = edition
       @volume = volume
       
+      end
+      
+      def to_s # Método to_string de la clase. (FORMATO APA).
+        to_s_book = "" # Inicialización de una cadena de carácteres.
+        to_s_book  << @author << " (" << @publication.to_s << "). " << @title << " (" << @edition.to_s << ") (" << @volume.to_s << "). " << @editorial << "."
       end
     end
     

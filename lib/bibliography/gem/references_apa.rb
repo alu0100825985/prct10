@@ -12,7 +12,6 @@ class References_APA # Clase para representar referencias bajo el formato APA.
 		string = "" # Inicialiazición de una cadena de carácteres.
 		@list.each do |reference|
 			string << reference.to_s
-			string << "\n"
 		end
 		return string
 	end
