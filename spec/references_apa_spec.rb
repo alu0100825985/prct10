@@ -24,13 +24,13 @@ describe References_APA do
         expect(@r_apa.to_s).to eq("Clark, R. & Dawson, M. (17 July, 2009). Ruby Computer (7) (56484FG84). Rered.")
     end
     
-    it "El artículo se inserta bajo el formato APA" do
+    it "El articulo se inserta bajo el formato APA" do
         @r_apa = References_APA.new()
         @r_apa.insert_reference(@article)
         expect(@r_apa.to_s).to eq("Patric, D. & Sercuc, S. (23 January, 2015). Ruby Days, Ruby Initial (78) (4) (8734GHF93). Yundo.")
     end
     
-    it "El artículo de periódico se inserta bajo el formato APA" do
+    it "El articulo de periodico se inserta bajo el formato APA" do
         @r_apa = References_APA.new()
         @r_apa.insert_reference(@newspaper_article)
         expect(@r_apa.to_s).to eq("Kluivert, P. & Scholes, P. (15 April, 2010). Ruby Future. Parak, pp. 130.")
