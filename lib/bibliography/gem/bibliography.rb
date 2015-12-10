@@ -113,31 +113,31 @@
       end
     end
     
-    class Newspaper_Articles < Articles # Clase para representar artículos de periódicos.
+    class Newspaper_Articles < References # Clase para representar artículos de periódicos.
     
       attr_accessor :number_pages
     
       #-----> MÉTODOS ELEMENTALES DE LA CLASE.
     
-      def initialize(author, title, editorial, publication, format, number_pages) # Constructor de la clase.
+      def initialize(author, title, editorial, publication, number_pages) # Constructor de la clase.
     
       # Declaración e inicialización de las variables de instancia.
-      super(author, title, editorial, publication, format) # Atributos de la clase padre.
+      super(author, title, editorial, publication) # Atributos de la clase padre.
       @number_pages = number_pages
       
       end
     end
     
-    class Electronic_Document < Articles # Clase para representar documentos electrónicos.
+    class Electronic_Document < References # Clase para representar documentos electrónicos.
     
       attr_accessor :url, :access_date
     
       #-----> MÉTODOS ELEMENTALES DE LA CLASE.
     
-      def initialize(author, title, editorial, publication, format, url, access_date) # Constructor de la clase.
+      def initialize(author, title, editorial, publication, url, access_date) # Constructor de la clase.
     
       # Declaración e inicialización de las variables de instancia.
-      super(author, title, editorial, publication, format) # Atributos de la clase padre.
+      super(author, title, editorial, publication) # Atributos de la clase padre.
       @url = url
       @access_date = access_date
       
