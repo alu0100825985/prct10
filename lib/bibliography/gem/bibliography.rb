@@ -139,11 +139,10 @@
     
       #-----> MÉTODOS ELEMENTALES DE LA CLASE.
     
-      def initialize(responsible, title, editorial, publication, edition_ed, media_type, url, access_date) # Constructor de la clase.
+      def initialize(author, title, editorial, publication, edition_ed, media_type, url, access_date) # Constructor de la clase.
     
       # Declaración e inicialización de las variables de instancia.
       super(author, title, editorial, publication) # Atributos de la clase padre.
-      @responsible = responsible
       @edition_ed = edition_ed
       @media_type = media_type
       @url = url
@@ -153,7 +152,7 @@
       
       def to_s # Método to_string de la clase. (FORMATO APA).
         to_s_electronic_document = "" # Inicialización de una cadena de carácteres.
-        to_s_electronic_document << @responsible << " (" << @publication.to_s << "). " << @title << " (" << @edition_ed.to_s << "), [" << @media_type << "]. " << @editorial << ". Disponible en: " << @url << "[" << @access_date << "]."
+        to_s_electronic_document << @author << " (" << @publication.to_s << "). " << @title << " (" << @edition_ed.to_s << "), [" << @media_type << "]. " << @editorial << ". Disponible en: " << @url << " [" << @access_date.to_s << "]."
       end
     end
     
