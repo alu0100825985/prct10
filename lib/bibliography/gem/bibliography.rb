@@ -36,6 +36,23 @@
 				
 				return author_formated # Retornamos el autor bajo formato.
 		  end
+		  
+		  def title_format(title) # Método para obtener el título bajo el formato APA.
+		    title_formated = title.split(' ') # Usamos el método split para separar las palabras en función de un espacio.
+			  title_formated.each do |word| # Para cada palabra que forma el título.
+				  if word.length > 3 # CONDICIÓN: Si la palabra tiene más de tres letras.
+				  	word.capitalize! # Ponemos su primera letra en mayúscula.
+				  else
+					  word.downcase! # Ponemos todas las letras en minúsculas.
+				  end
+				
+				  if word == title_formated[0] # CONDICIÓN: Siempre la primera palabra irá con la primera letra en mayúscula.
+					  word.capitalize!
+				  end
+			  end
+			  
+			  return title_formated.join(' ') # Retornamos el título aplicando un espacio entre palabra.
+			end
       
       #-----> MÉTODOS GETTERS DE LA CLASE.
       
