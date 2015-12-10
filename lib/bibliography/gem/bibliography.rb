@@ -1,4 +1,4 @@
-    class References # Clase para el desarrollo de referencias.
+    class References # Clase para el desarrollo de referencias
     
       attr_accessor :author, :title, :editorial, :date, :number_pages
       include Comparable # Módulo que permite que implementemos comparaciones convencionales en nuestra clase.
