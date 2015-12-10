@@ -6,7 +6,7 @@ describe References_APA do
     before :all do 
         @book = Books.new(["Remon Clark", "Mary Dawson"], "Ruby Computer", "Rered", "17 July, 2009", 7, "56484FG84")
 		@article = Articles.new(["Daymon Patric", "Spenson Sercuc"], "Ruby Days", "Yundo", "23 January, 2015", "Ruby Initial", 78, 4, "8734GHF93")
-		@newspaper_article = Newspaper_Articles.new(["Patrick Kluivert", "Paul Scholes"], "Editorik Ruby", "Parak", "15 April, 2010", 130)
+		@newspaper_article = Newspaper_Articles.new(["Patrick Kluivert", "Paul Scholes"], "Ruby Future", "Parak", "15 April, 2010", 130)
 		@electronic_document = Electronic_Document.new(["Seanwe Houston", "Raymond Domenech", "Rui Costa"], "Ruby 23", "University", "12 May, 1995", "http://www.ruby23.com/ruicosta.com", "5 December, 2015")
     end
     
@@ -28,5 +28,11 @@ describe References_APA do
         @r_apa = References_APA.new()
         @r_apa.insert_reference(@article)
         expect(@r_apa.to_s).to eq("Patric, D. & Sercuc, S. (23 January, 2015). Ruby Days, Ruby Initial (78) (4) (8734GHF93). Yundo.")
+    end
+    
+    it "El artículo de periódico se inserta bajo el formato APA" do
+        @r_apa = References_APA.new()
+        @r_apa.insert_reference(@newspaper_article)
+        expect(@r_apa.to_s).to eq("Kluivert, P. & Scholes, P. (15 April, 2010). Ruby Future. Parak, pp. 130.")
     end
 end
