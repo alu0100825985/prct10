@@ -7,13 +7,35 @@
     
       def initialize(author, title, editorial, publication) # Constructor de la clase.
     
-      # Declaración e inicialización de las variables de instancia.
-      @author = author
-      @title = title
-      @editorial = editorial
-      @publication = publication
-      
+        # Declaración e inicialización de las variables de instancia.
+        @author = author_format(author) # Obtenemos el nombre del author bajo formato.
+        @title = title
+        @editorial = editorial
+        @publication = publication
       end
+      
+      def author_format(author) # Método para obtener el autor bajo el formato Autor, A. A.
+        author_formated = "" # Inicializacion de una cadena de carácteres que almacenará el autor formateado.
+          author.each do |word| # Para cada palabra que forma el nombre del autor.
+  				  separate = word.split(/\W+/) # Usamos el método split para separar las palabras en función de una letra mayúscula.
+  				  author_formated += separate[1] # Añadimos el primer apellido completo.
+  				  author_formated += ", " # Añadimos una coma a continuación.
+  				  
+  				  unless separate[2].nil? # CONDICIÓN: Si el segundo apellido existe.
+  				    author_formated += separate[2][0] # Añadimos su inicial.
+   					  author_formated += ". " # Añadimos un punto a continuación.
+   				  end
+   				  
+  				  author_formated += separate[0][0] # Añadimos la inicial del nombre.
+  				  author_formated += "." # Añadimos un punto a continuación.
+				  
+  				  unless word == author.last # CONDICIÓN: Si la palabra actual no coincide con la última del nombre (existe otro autor).
+  				    author_formated += " & " # Añadimos un ampersand a continuación.
+  				  end
+  				end
+				
+				return author_formated # Retornamos el autor bajo formato.
+		  end
       
       #-----> MÉTODOS GETTERS DE LA CLASE.
       
@@ -28,8 +50,7 @@
       def get_editorial() # Método para la devolución de editorial.
         return @editorial
       end
-
-    end
+  end
     
     class Books < References # Clase para el desarrollo de referencias bibliográficas. Herencia de References.
     
@@ -42,7 +63,7 @@
       # Declaración e inicialización de las variables de instancia.
       super(author, title, editorial, publication) # Atributos de la clase padre.
       @edition = edition
-      @volume = isbn
+      @volume = volume
       
       end
     end

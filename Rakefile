@@ -16,3 +16,7 @@ end
 task :spec_references do
     sh "rspec spec/bibliography_spec.rb"
 end
+
+task :spec_references_apa do
+    sh "rspec spec/references_apa_spec.rb"
+end

@@ -1,3 +1,5 @@
+require './lib/bibliography/gem/double_list.rb'
+
 class References_APA # Clase para representar referencias bajo el formato APA.
          
     include Enumerable # Módulo que permite que implementemos enumeraciones convencionales en nuestra clase.
@@ -16,7 +18,7 @@ class References_APA # Clase para representar referencias bajo el formato APA.
 	end
 		
 	def insert_reference(reference) # Método para insertar una referencia.
-		@list.inserta(reference)
+		@list.insert(reference)
 	end
 		
 	def each # Sobrecarga del método each del mixin Enumerable.
