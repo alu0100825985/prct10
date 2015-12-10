@@ -126,6 +126,11 @@
       @number_pages = number_pages
       
       end
+      
+      def to_s # Método to_string de la clase. (FORMATO APA).
+        to_s_article_newspaper = "" # Inicialización de una cadena de carácteres.
+        to_s_article_newspaper << @author << " (" << @publication.to_s << "). " << @title << ". " << @editorial << ", pp. " << @number_pages.to_s << "."
+      end
     end
     
     class Electronic_Document < References # Clase para representar documentos electrónicos.
