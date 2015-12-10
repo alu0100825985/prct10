@@ -78,7 +78,6 @@
 				end
 				
 			end
-		end
       
       #-----> MÉTODOS GETTERS DE LA CLASE.
       
