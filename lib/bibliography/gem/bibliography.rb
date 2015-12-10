@@ -86,22 +86,30 @@
       
       def to_s # Método to_string de la clase. (FORMATO APA).
         to_s_book = "" # Inicialización de una cadena de carácteres.
-        to_s_book  << @author << " (" << @publication.to_s << "). " << @title << " (" << @edition.to_s << ") (" << @volume.to_s << "). " << @editorial << "."
+        to_s_book << @author << " (" << @publication.to_s << "). " << @title << " (" << @edition.to_s << ") (" << @volume.to_s << "). " << @editorial << "."
       end
     end
     
     class Articles < References # Clase para representar artículos de revistas
     
-      attr_accessor :format
+      attr_accessor :edition_article, :volume_article, :chapter_title, :chapter_number_pages
     
       #-----> MÉTODOS ELEMENTALES DE LA CLASE.
     
-      def initialize(author, title, editorial, publication, format) # Constructor de la clase.
+      def initialize(author, title, editorial, publication, chapter_title, chapter_number_pages, edition_article, volume_article) # Constructor de la clase.
     
       # Declaración e inicialización de las variables de instancia.
       super(author, title, editorial, publication) # Atributos de la clase padre.
-      @format = format
+      @chapter_title = chapter_title
+      @chapter_number_pages = chapter_number_pages
+      @edition_article = edition_article
+      @volume_article = volume_article
       
+      end
+      
+      def to_s # Método to_string de la clase. (FORMATO APA).
+        to_s_article = "" # Inicialización de una cadena de carácteres.
+        to_s_article << @author << " (" << @publication.to_s << "). " << @title << ", " << @chapter_title << " (" << @chapter_number_pages.to_s << ") (" << @edition_article.to_s << ") (" << @volume_article.to_s << "). " << @editorial << "."
       end
     end
     
