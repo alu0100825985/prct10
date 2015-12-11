@@ -36,7 +36,7 @@ describe References_APA do
         expect(@r_apa.to_s).to eq("Kluivert, P. & Scholes, P. (15 April, 2010). Ruby Future. Parak, pp. 130.")
     end
     
-    it "El documento electronico de periodico se inserta bajo el formato APA" do
+    it "El documento electronico se inserta bajo el formato APA" do
         @r_apa = References_APA.new()
         @r_apa.insert_reference(@electronic_document)
         expect(@r_apa.to_s).to eq("Houston, S. & Sullivan, R. (12 May, 1995). Ruby 23 (3), [electronic]. University. Disponible en: http://www.ruby23.com/project/index [5 December, 2015].")
